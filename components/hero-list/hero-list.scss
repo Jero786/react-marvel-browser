@@ -1,0 +1,16 @@
+@import "../../commons/commons";
+
+.mv-hero-list {
+	displey: flex;
+	padding-left: 1em;
+	list-style: none;
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	@include bp(xs) {
+		margin: 0;
+		padding: 0;
+	}
+}

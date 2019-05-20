@@ -1,0 +1,100 @@
+@import '../commons/commons';
+
+$width-sidebar: 30%;
+$header-height: 70px;
+$footer-height: 50px;
+
+.mv-home {
+
+	padding-top: $header-height;
+	padding-bottom: $footer-height;
+
+	&__header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: $header-height ;
+		background-color: $black;
+		@include shallow-soft-shadow();
+		color: $white;
+		z-index: 100;
+
+		h1 {
+			height: inherit;
+			padding: .3em;
+			margin: 0;
+			font-size: 4em;
+			font-weight: 100;
+		}
+	}
+
+	&__body {
+		background-color: $grayLight;
+		display: flex;
+		padding-top: $header-height - 75px;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	&__sidebar {
+		width: $width-sidebar;
+
+		@include bp(xs) {
+			width: 100%;
+		}
+
+		border-right: solid 1px $grayLight;
+	}
+
+	&__content {
+		overflow: auto;
+		position: fixed;
+		left: $width-sidebar;
+		bottom: $footer-height + 10px;
+		top: $header-height;
+		right: 0;
+
+		@include bp(xs) {
+			display: none;
+		}
+	}
+
+	&__footer {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: $footer-height;
+		background-color: $black;
+		display: flex;
+		align-self: center;
+		justify-content: flex-start;
+
+		@include bp(xs) {
+			justify-content: space-between;
+		}
+
+		button {
+			height: $footer-height - 20px;
+			display: flex;
+			align-self: center;
+			justify-content: center;
+			color: $white;
+			margin: 1em;
+			background-color: $red;
+			font-weight: bold;
+			padding: .5em 5em;
+
+			&:hover {
+				cursor: pointer;
+				opacity: .9
+			}
+
+			@include bp(xs) {
+				width: 50%;
+			}
+		}
+	}
+}

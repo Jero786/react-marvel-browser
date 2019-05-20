@@ -1,0 +1,52 @@
+@import '../../commons/commons';
+
+.mv-hero-list-item {
+	font-size: 20px;
+	background-color: $grayLighter;
+
+	@include shallow-soft-shadow();
+	transition: all .5s;
+
+	&:hover {
+		animation: all 1s;
+		cursor: pointer;
+		transform: translateY(5px);
+	}
+
+	&__header {
+		display: flex;
+		align-self: center;
+		padding: 1em;
+
+		img {
+			height: 150px;
+			width: 150px;
+			border-radius: 50%;
+			@include soft-shadow();
+			@include bp(xs) {
+				height: 100px;
+				width: 100px;
+			}
+		}
+	}
+
+	&__body {
+		@include bp(xs) {
+		}
+		padding: 1em;
+	}
+
+	@include bp(xs) {
+		font-size: 14px;
+		display: flex;
+		justify-content: flex-start;
+		margin: 1em;
+	}
+
+	&__label {
+		font-weight: bold;
+	}
+	&__value {
+
+	}
+}

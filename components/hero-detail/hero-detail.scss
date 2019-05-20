@@ -1,0 +1,43 @@
+@import '../../commons/commons';
+
+.mv-hero-detail {
+
+	padding: 1em;
+	background-color: $white;
+	margin: 1em;
+
+	@include shallow-soft-shadow();
+
+	li {
+		list-style: none;
+	}
+
+	&:hover {
+		cursor: pointer;
+
+	}
+
+	&__image {
+		@include shallow-soft-shadow();
+		height: 500px;
+	}
+
+	&__name {
+		font-size: 3em;
+	}
+
+	&__biography {
+		padding: 1em 0;
+	}
+
+	&__urls {
+		margin: 0;
+		padding: 1em 0;
+	}
+
+}
+
+.non-selected-hero {
+	font-size: 5em;
+}
+
