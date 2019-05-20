@@ -77,6 +77,7 @@ $ npm run test:watch
 
 ## Some comments
 * I was not able to find any Biography information in a clean Rest API. So I was need to scraping the content of some sub links returned by character API. So in some cases is there, like character named: `Abomination (Emil Blonsky)`, and in some other cases does not exist the biography.
+* In order to avoid CORS problems, I create a custom express server to perform the scrapping task mentioned above.
 
 ## Pendign implementations
 * Implement TypeScript, in order to catch problems at runtime and also avoid problems with interoperability between Immutable Obj and native JS obj.
